@@ -1,4 +1,4 @@
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 from enum import Enum
 
 from sqlalchemy import DateTime, Integer, String
@@ -31,6 +31,6 @@ class Ticket(Base):
     )
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True),
-        default=lambda: datetime.now(UTC),
+        default=lambda: datetime.now(timezone.utc),
         nullable=False,
     )
