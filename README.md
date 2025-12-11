@@ -41,6 +41,16 @@ pip install -e ".[dev]"
 make install
 ```
 
+### Option 3: Using Docker
+
+```bash
+# Build the image
+docker build -t ticket-api .
+
+# Run the container
+docker run -d -p 8000:8000 ticket-api
+```
+
 ## Running the API
 
 ### Development server
