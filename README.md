@@ -1,5 +1,10 @@
 # Ticket Management API
 
+[![CI](https://github.com/khalidgt18/tech_test/actions/workflows/ci.yml/badge.svg)](https://github.com/khalidgt18/tech_test/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/khalidgt18/tech_test/actions/workflows/codeql.yml/badge.svg)](https://github.com/khalidgt18/tech_test/actions/workflows/codeql.yml)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 A mini REST API for ticket management built with FastAPI, SQLAlchemy, and Pydantic.
 
 ## Features
@@ -19,8 +24,8 @@ A mini REST API for ticket management built with FastAPI, SQLAlchemy, and Pydant
 
 ```bash
 # Clone the repository
-git clone <repository-url>
-cd ticket-api
+git clone https://github.com/khalidgt18/tech_test.git
+cd tech_test
 
 # Create a virtual environment
 python -m venv venv
