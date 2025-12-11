@@ -169,6 +169,40 @@ ticket-api/
 └── README.md
 ```
 
+## CI/CD & Code Quality
+
+Ce projet utilise GitHub Actions pour l'intégration continue et le contrôle qualité.
+
+### Pipeline CI
+
+| Vérification | Description |
+|--------------|-------------|
+| **Tests multi-versions** | Exécution sur Python 3.10, 3.11, 3.12 |
+| **Linting Ruff** | Vérification du style de code (PEP8, imports, bugs) |
+| **Formatage Ruff** | Vérification du formatage du code |
+| **Coverage** | Minimum 80% de couverture requis |
+| **CodeQL** | Analyse de sécurité du code Python |
+
+### Outils de qualité
+
+- **Ruff** : Linter ultra-rapide (150x plus rapide que flake8), remplace flake8 + isort + black
+- **pytest-cov** : Mesure de couverture de tests avec seuil minimum
+- **CodeQL** : Détection de vulnérabilités de sécurité
+
+### Dependabot
+
+Mise à jour automatique des dépendances chaque lundi :
+- Dépendances Python (pip)
+- Actions GitHub
+
+### Protection de branche
+
+La branche `main` est protégée :
+- Les status checks CI doivent passer avant merge
+- Historique linéaire requis (pas de merge commits)
+- Force push bloqué
+- Analyse CodeQL requise
+
 ## Technical Decisions
 
 See `docs/plananddecisions.md` for detailed technical decisions and their rationale.
